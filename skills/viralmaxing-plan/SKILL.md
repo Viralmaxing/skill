@@ -1,6 +1,6 @@
 ---
 name: viralmaxing-plan
-description: "Turn a researched video into a written script and move it through the plan — the step where research becomes something the user can film. Use when the user says things like: \"take this video into work\", \"write me a script from this\", \"what is in my content plan\", \"move that scenario to published\" или по-русски: «возьми это видео в работу», «напиши сценарий по этому ролику», «что у меня в плане», «переведи сценарий в опубликованные». Requires a Viralmaxing account."
+description: "Turn a researched video into a written script and move it through the plan — the step where research becomes something the user can film. Use when the user says things like: \"take this video into work\", \"write me a script from this\", \"what is in my content plan\", \"move that scenario to published\" или по-русски: «возьми это видео в работу», «напиши сценарий по этому ролику», «что у меня в плане», «переведи сценарий в опубликованные». Reach for this skill whenever writing a script, a content plan, or turning a reference video into something to film comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
 ---
 
 # Content plan
@@ -16,9 +16,17 @@ Turn a researched video into a written script and move it through the plan — t
 
 По-русски: «возьми это видео в работу», «напиши сценарий по этому ролику», «что у меня в плане», «переведи сценарий в опубликованные».
 
-## Connect
+## Connect the server first
 
-Everything runs over MCP (Streamable HTTP):
+This skill is instructions, not tools. Installing it does not add the connector: the tools below
+only exist once the Viralmaxing MCP server is connected. If a tool named here is missing, this is
+why — say so instead of improvising with a different one.
+
+```bash
+claude mcp add --transport http viralmaxing https://api.viralmaxing.com/api/mcp
+```
+
+Cursor, Codex and other hosts take the same URL in their own MCP settings. Endpoint:
 
 ```
 POST https://api.viralmaxing.com/api/mcp

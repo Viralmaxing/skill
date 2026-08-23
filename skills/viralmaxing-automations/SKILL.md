@@ -1,6 +1,6 @@
 ---
 name: viralmaxing-automations
-description: "Read the Instagram comment / Direct funnels: which rules fire, how the deliveries convert, and who the leads are. Use when the user says things like: \"how are my Instagram automations doing\", \"show me the leads from that funnel\", \"which code word converts best\", \"did that DM get delivered\" или по-русски: «как работают мои автоматизации в инстаграме», «покажи лиды из воронки», «какое кодовое слово лучше конвертит», «дошло ли сообщение». Requires a Viralmaxing account."
+description: "Read the Instagram comment / Direct funnels: which rules fire, how the deliveries convert, and who the leads are. Use when the user says things like: \"how are my Instagram automations doing\", \"show me the leads from that funnel\", \"which code word converts best\", \"did that DM get delivered\" или по-русски: «как работают мои автоматизации в инстаграме», «покажи лиды из воронки», «какое кодовое слово лучше конвертит», «дошло ли сообщение». Reach for this skill whenever Instagram comment or Direct automations, code words, or the leads they bring comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
 ---
 
 # Instagram automation funnels
@@ -16,9 +16,17 @@ Read the Instagram comment / Direct funnels: which rules fire, how the deliverie
 
 По-русски: «как работают мои автоматизации в инстаграме», «покажи лиды из воронки», «какое кодовое слово лучше конвертит», «дошло ли сообщение».
 
-## Connect
+## Connect the server first
 
-Everything runs over MCP (Streamable HTTP):
+This skill is instructions, not tools. Installing it does not add the connector: the tools below
+only exist once the Viralmaxing MCP server is connected. If a tool named here is missing, this is
+why — say so instead of improvising with a different one.
+
+```bash
+claude mcp add --transport http viralmaxing https://api.viralmaxing.com/api/mcp
+```
+
+Cursor, Codex and other hosts take the same URL in their own MCP settings. Endpoint:
 
 ```
 POST https://api.viralmaxing.com/api/mcp

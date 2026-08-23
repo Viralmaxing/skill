@@ -1,6 +1,6 @@
 ---
 name: viralmaxing-video
-description: "Understand one specific video: its full metrics, its caption, and what is actually said in it, via transcription. Use when the user says things like: \"transcribe this Reel\", \"what does this video say\", \"show me the numbers on this post\", \"why did this one work\" или по-русски: «расшифруй этот рилс», «о чём это видео», «покажи метрики этого поста», «почему этот ролик залетел». Requires a Viralmaxing account."
+description: "Understand one specific video: its full metrics, its caption, and what is actually said in it, via transcription. Use when the user says things like: \"transcribe this Reel\", \"what does this video say\", \"show me the numbers on this post\", \"why did this one work\" или по-русски: «расшифруй этот рилс», «о чём это видео», «покажи метрики этого поста», «почему этот ролик залетел». Reach for this skill whenever a specific Reel, TikTok or Short — its numbers, its hook, or what is said in it comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
 ---
 
 # Video intelligence
@@ -16,9 +16,17 @@ Understand one specific video: its full metrics, its caption, and what is actual
 
 По-русски: «расшифруй этот рилс», «о чём это видео», «покажи метрики этого поста», «почему этот ролик залетел».
 
-## Connect
+## Connect the server first
 
-Everything runs over MCP (Streamable HTTP):
+This skill is instructions, not tools. Installing it does not add the connector: the tools below
+only exist once the Viralmaxing MCP server is connected. If a tool named here is missing, this is
+why — say so instead of improvising with a different one.
+
+```bash
+claude mcp add --transport http viralmaxing https://api.viralmaxing.com/api/mcp
+```
+
+Cursor, Codex and other hosts take the same URL in their own MCP settings. Endpoint:
 
 ```
 POST https://api.viralmaxing.com/api/mcp

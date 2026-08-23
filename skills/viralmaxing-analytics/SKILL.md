@@ -1,6 +1,6 @@
 ---
 name: viralmaxing-analytics
-description: "Read the performance of the Instagram / TikTok / YouTube accounts this workspace tracks — views, engagement, VM Score (0-100 virality), outlier multipliers, per-video breakdowns over a period — and bring new accounts under analysis. Use when the user says things like: \"how did my Reels perform this month\", \"which of my videos are outliers\", \"give me a breakdown of this account\", \"track this account\" или по-русски: «как зашли мои рилсы за месяц», «какие ролики выстрелили», «разбери этот аккаунт», «добавь аккаунт в отслеживание». Requires a Viralmaxing account."
+description: "Read the performance of the Instagram / TikTok / YouTube accounts this workspace tracks — views, engagement, VM Score (0-100 virality), outlier multipliers, per-video breakdowns over a period — and bring new accounts under analysis. Use when the user says things like: \"how did my Reels perform this month\", \"which of my videos are outliers\", \"give me a breakdown of this account\", \"track this account\" или по-русски: «как зашли мои рилсы за месяц», «какие ролики выстрелили», «разбери этот аккаунт», «добавь аккаунт в отслеживание». Reach for this skill whenever the user's own Instagram / TikTok / YouTube numbers, post performance, engagement or growth comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
 ---
 
 # Account analytics
@@ -16,9 +16,17 @@ Read the performance of the Instagram / TikTok / YouTube accounts this workspace
 
 По-русски: «как зашли мои рилсы за месяц», «какие ролики выстрелили», «разбери этот аккаунт», «добавь аккаунт в отслеживание».
 
-## Connect
+## Connect the server first
 
-Everything runs over MCP (Streamable HTTP):
+This skill is instructions, not tools. Installing it does not add the connector: the tools below
+only exist once the Viralmaxing MCP server is connected. If a tool named here is missing, this is
+why — say so instead of improvising with a different one.
+
+```bash
+claude mcp add --transport http viralmaxing https://api.viralmaxing.com/api/mcp
+```
+
+Cursor, Codex and other hosts take the same URL in their own MCP settings. Endpoint:
 
 ```
 POST https://api.viralmaxing.com/api/mcp

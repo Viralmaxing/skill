@@ -1,6 +1,6 @@
 ---
 name: viralmaxing-research
-description: "Find what is already working: the formats going viral for a keyword, an idea or an account, and the competitors worth watching in a niche. Use when the user says things like: \"what is working for my competitors right now\", \"find viral formats about <topic>\", \"who else is big in this niche\", \"find me competitors\" или по-русски: «что заходит у конкурентов», «найди вирусные форматы про <тему>», «кто ещё крупный в этой нише», «подбери конкурентов». Requires a Viralmaxing account."
+description: "Find what is already working: the formats going viral for a keyword, an idea or an account, and the competitors worth watching in a niche. Use when the user says things like: \"what is working for my competitors right now\", \"find viral formats about morning routines\", \"who else is big in this niche\", \"find me competitors\" или по-русски: «что заходит у конкурентов», «найди вирусные форматы про утренние привычки», «кто ещё крупный в этой нише», «подбери конкурентов». Reach for this skill whenever competitors, niches, trends, or what format is working on short-form video right now comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
 ---
 
 # Competitor research
@@ -10,15 +10,23 @@ Find what is already working: the formats going viral for a keyword, an idea or 
 ## When to use this skill
 
 - "what is working for my competitors right now"
-- "find viral formats about <topic>"
+- "find viral formats about morning routines"
 - "who else is big in this niche"
 - "find me competitors"
 
-По-русски: «что заходит у конкурентов», «найди вирусные форматы про <тему>», «кто ещё крупный в этой нише», «подбери конкурентов».
+По-русски: «что заходит у конкурентов», «найди вирусные форматы про утренние привычки», «кто ещё крупный в этой нише», «подбери конкурентов».
 
-## Connect
+## Connect the server first
 
-Everything runs over MCP (Streamable HTTP):
+This skill is instructions, not tools. Installing it does not add the connector: the tools below
+only exist once the Viralmaxing MCP server is connected. If a tool named here is missing, this is
+why — say so instead of improvising with a different one.
+
+```bash
+claude mcp add --transport http viralmaxing https://api.viralmaxing.com/api/mcp
+```
+
+Cursor, Codex and other hosts take the same URL in their own MCP settings. Endpoint:
 
 ```
 POST https://api.viralmaxing.com/api/mcp
