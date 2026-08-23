@@ -62,12 +62,18 @@ Available from every Viralmaxing skill: `get_energy_balance`, `get_operation`, `
 Every one of these **requires** a `confirm_cost` argument holding the exact price. The server
 refuses the call without it and states the real number; that refusal is not a retry signal.
 
-The handshake, end to end:
+The prices above come from the same catalog the server bills from, so there is no need to probe
+for them:
 
-1. Call without guessing the price. The refusal names it.
-2. Tell the **user** that number and wait for a yes. The confirmation exists so a person
-   approves the spend, not so the call succeeds.
-3. Call again with `"confirm_cost": <the exact number>`.
+1. Tell the **user** the number and wait for a yes. The confirmation exists so a person approves
+   the spend, not so the call succeeds.
+2. Call with `"confirm_cost": <the exact number>`.
+
+If you are ever unsure of a price, calling without `confirm_cost` is safe — the server refuses
+and quotes the real number rather than charging. Use that as a fallback, not as step one.
+
+**The price is per call, not per result.** A search costs the same whether it returns 20 rows or
+100, so ask for a generous limit the first time instead of paying twice for a second pass.
 
 Reading anything the workspace already holds is free. `get_energy_balance` reports what is left.
 
