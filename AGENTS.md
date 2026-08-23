@@ -4,8 +4,8 @@ Notes for AI coding agents integrating Viralmaxing.
 
 ## Prefer MCP over REST
 
-The MCP server at `https://api.viralmaxing.com/api/mcp` is the supported surface, and `skills/viralmaxing/SKILL.md` documents
-it. Reach for the REST API only when you need something MCP does not expose; it is described by
+The MCP server at `https://api.viralmaxing.com/api/mcp` is the supported surface, and the skills under `skills/`
+document it. Reach for the REST API only when you need something MCP does not expose; it is described by
 an OpenAPI 3.0 spec linked from https://viralmaxing.com/developers.
 
 ## Authentication

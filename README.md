@@ -27,7 +27,7 @@ Keys are created at https://viralmaxing.com/settings/api. A Viralmaxing account 
 
 | Path | What it is |
 |---|---|
-| `skills/viralmaxing/SKILL.md` | The skill: when to use it, how to connect, the tool inventory and the cost rules |
+| `skills/` | 5 skills, one per intent — see the table above |
 | `plugin.json` | [Agent Plugins](https://agent-plugins.org) manifest |
 | `mcp.json` | MCP server declaration for plugin hosts |
 | `AGENTS.md` | Notes for AI coding agents working against this API |
