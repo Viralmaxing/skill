@@ -8,7 +8,7 @@ transcripts, and turn a researched video into a written script in the content pl
 ## Install
 
 ```bash
-npx skills add alexey-muzyka-1/viralmaxing-skill
+npx skills add Viralmaxing/skill
 ```
 
 ## Connect
