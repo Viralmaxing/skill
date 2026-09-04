@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.viralmaxing/mcp",
   "title": "Viralmaxing",
-  "description": "Short-form video intelligence: analytics for the Instagram, TikTok and YouTube accounts a creator tracks, competitor and viral-format research, video transcripts, and a content plan where a researched video becomes a written script.",
+  "description": "Instagram, TikTok and YouTube analytics: your numbers, competitors, transcripts and a content plan",
   "version": "0.2.0",
   "websiteUrl": "https://viralmaxing.com",
   "repository": {
