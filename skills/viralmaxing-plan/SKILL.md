@@ -47,6 +47,7 @@ the workspace does not track an account, no tool here will return metrics for it
 |---|---|---|
 | `list_scenarios` | Content plan | read |
 | `get_scenario` | Scenario detail | read |
+| `create_scenario` | Add a scenario | write |
 | `save_scenario` | Edit a scenario | write |
 | `set_scenario_status` | Move scenarios | write |
 | `take_into_work` | Take a post into work | spend |
