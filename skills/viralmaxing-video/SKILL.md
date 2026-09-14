@@ -68,7 +68,7 @@ attempted, rather than silently ignoring it. It usually means the account is tar
 
 ## Cost — the rule you must not break
 
-- `transcribe_post` — 1 energy plus the video's measured cost
+- `transcribe_post` — 10 energy plus the video's measured cost
 
 Every one of these **requires** a `confirm_cost` argument holding the exact price. The server
 refuses the call without it and states the real number; that refusal is not a retry signal.
@@ -126,7 +126,7 @@ next page. A truncated table is never the whole answer — page before concludin
 
 - **Account analytics** (`viralmaxing-analytics`) — Read metrics for the accounts a workspace tracks: views, engagement, VM Score (0-100 virality), outlier multiplier and per-video breakdowns over a period.
 - **Competitor research** (`viralmaxing-research`) — Compare a creator against tracked competitors, discover new competitors in a niche, and find the formats already going viral by keyword, idea description or account.
-- **Content plan** (`viralmaxing-plan`) — Read and update the content plan: turn a researched video into a scenario, save an edited script, and move scenarios between statuses.
+- **Content plan** (`viralmaxing-plan`) — Read and update the content plan: turn a researched video into a scenario, save an edited script, label a card with its narrative format or one of the user's own tags, and move scenarios between statuses.
 - **Instagram automation funnels** (`viralmaxing-automations`) — Build and change Instagram comment / Direct funnels — someone writes a code word under a reel and gets the material in Direct — and read the rules, their delivery stats and the leads they produced.
 
 ## Not available here

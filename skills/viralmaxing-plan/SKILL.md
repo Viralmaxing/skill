@@ -51,6 +51,9 @@ the workspace does not track an account, no tool here will return metrics for it
 | `save_scenario` | Edit a scenario | write |
 | `set_scenario_status` | Move scenarios | write |
 | `take_into_work` | Take a post into work | spend |
+| `list_scenario_tags` | Scenario tags | read |
+| `assign_scenario_tag` | Tag a scenario | write |
+| `unassign_scenario_tag` | Untag a scenario | write |
 
 Available from every Viralmaxing skill: `get_energy_balance`, `get_operation`, `list_workspaces`, `switch_workspace`, `search`, `fetch`.
 
