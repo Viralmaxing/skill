@@ -34,8 +34,8 @@ Keys are created at https://viralmaxing.com/settings/api. A Viralmaxing account 
 
 ## A note on cost
 
-23 of the 41 tools are free reads. The
-6 that produce something new spend the account's energy, and every one
+24 of the 44 tools are free reads. The
+7 that produce something new spend the account's energy, and every one
 of them requires a `confirm_cost` argument holding the exact price — the server refuses the call
 otherwise and states the real number. Tell the person the price and get their agreement before
 confirming; that handshake is the point, not an obstacle.
