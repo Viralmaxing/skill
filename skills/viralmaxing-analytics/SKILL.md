@@ -52,6 +52,12 @@ the workspace does not track an account, no tool here will return metrics for it
 | `create_account_report` | Analyze an account | spend |
 | `get_account_report` | Account report | read |
 | `track_accounts` | Track accounts | spend |
+| `untrack_account` | Stop tracking an account | write |
+| `list_account_groups` | Account groups | read |
+| `save_account_group` | Create or rename an account group | write |
+| `delete_account_group` | Delete an account group | write |
+| `add_accounts_to_group` | Add accounts to a group | write |
+| `remove_accounts_from_group` | Remove accounts from a group | write |
 
 Available from every Viralmaxing skill: `get_energy_balance`, `get_operation`, `list_workspaces`, `switch_workspace`, `search`, `fetch`.
 
