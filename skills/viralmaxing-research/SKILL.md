@@ -1,20 +1,33 @@
 ---
 name: viralmaxing-research
-description: "Find what is already working: the formats going viral for a keyword, an idea or an account, and the competitors worth watching in a niche. Use when the user says things like: \"what is working for my competitors right now\", \"find viral formats about morning routines\", \"who else is big in this niche\", \"find me competitors\" или по-русски: «что заходит у конкурентов», «найди вирусные форматы про утренние привычки», «кто ещё крупный в этой нише», «подбери конкурентов». Reach for this skill whenever competitors, niches, trends, or what format is working on short-form video right now comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
+description: "Find what is already working: the strong fresh videos the product already suggests, the ready lists of authors by niche, the formats going viral for a keyword, an idea or an account, and the competitors worth watching in a niche. Use when the user says things like: \"what should I shoot in my niche\", \"what is working for my competitors right now\", \"find viral formats about morning routines\", \"who else is big in this niche\", \"find me competitors\" или по-русски: «что снять в моей нише», «что заходит у конкурентов», «найди вирусные форматы про утренние привычки», «кто ещё крупный в этой нише», «подбери конкурентов». Reach for this skill whenever what to shoot next, competitors, niches, trends, or what format is working on short-form video right now comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
 ---
 
 # Competitor research
 
-Find what is already working: the formats going viral for a keyword, an idea or an account, and the competitors worth watching in a niche.
+Find what is already working: the strong fresh videos the product already suggests, the ready lists of authors by niche, the formats going viral for a keyword, an idea or an account, and the competitors worth watching in a niche.
 
 ## When to use this skill
 
+- "what should I shoot in my niche"
 - "what is working for my competitors right now"
 - "find viral formats about morning routines"
 - "who else is big in this niche"
 - "find me competitors"
 
-По-русски: «что заходит у конкурентов», «найди вирусные форматы про утренние привычки», «кто ещё крупный в этой нише», «подбери конкурентов».
+По-русски: «что снять в моей нише», «что заходит у конкурентов», «найди вирусные форматы про утренние привычки», «кто ещё крупный в этой нише», «подбери конкурентов».
+
+## Where to start
+
+**Read what is free before buying a search.** «What should I shoot» and «what works in my niche» have an order:
+
+1. `list_suggested` — the content-plan tab «Предложено»: videos that beat their author's usual views several times over, from the authors the user follows, the authors recommended to them and the authors of the niches they took. `take_into_work` acts on the one they pick.
+2. `list_niches` — when that is empty or off the topic. A niche is one shared list of authors who steadily get views; the user takes it themselves in the app (content plan → «Предложено»), and its authors' videos then come to `list_suggested`. No tool takes a niche.
+3. `find_ideas` — the paid keyword search, only when both came back empty or off the topic. Say that this is why, and state its price first.
+
+An empty answer from the first two is about this workspace, never about the market: do not tell the user that nothing works in their niche or that their niche is missing.
+
+«Who else is big in this niche» goes the same way: `list_niches` first — a niche's authors with their numbers, free — and `discover_competitors`, the dearest action here, only for lookalikes of an account the user names.
 
 ## Connect the server first
 
@@ -38,13 +51,16 @@ POST https://api.viralmaxing.com/api/mcp
 - **API key** — send `X-API-Key: vmx_...`, created at https://viralmaxing.com/settings/api. The same key works
   for the REST API at `https://api.viralmaxing.com/api` (OpenAPI: https://docs.viralmaxing.com/openapi.yaml).
 
-Every tool is scoped to the authenticated user's workspace. There is no public data surface: if
-the workspace does not track an account, no tool here will return metrics for it.
+Every tool is scoped to the authenticated user's workspace. An account's own metrics come back
+only when the workspace tracks it. What reaches past the workspace is the keyword search over the
+whole video base and the niches — shared lists of authors with their followers and usual views.
 
 ## Tools
 
 | Tool | What it does | Category |
 |---|---|---|
+| `list_suggested` | Suggested videos | read |
+| `list_niches` | Niches | read |
 | `list_competitors` | Competitor accounts | read |
 | `discover_competitors` | Discover competitors | spend |
 | `get_discovery_results` | Discovery results | read |
@@ -58,6 +74,8 @@ Available from every Viralmaxing skill: `get_energy_balance`, `get_operation`, `
 
 These tools return free text written by people outside this workspace:
 
+- `list_suggested` — handles of authors nobody here controls, and the reason each is in the pool
+- `list_niches` — handles of authors nobody here controls
 - `get_discovery_results` — bios and captions of candidate accounts
 - `get_idea_results` — captions and handles of accounts nobody here controls
 - `search` — post text from anywhere in the workspace

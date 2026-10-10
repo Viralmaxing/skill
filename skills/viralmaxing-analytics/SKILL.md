@@ -1,6 +1,6 @@
 ---
 name: viralmaxing-analytics
-description: "Read the performance of the Instagram / TikTok / YouTube accounts this workspace tracks — views, engagement, VM Score (0-100 virality), outlier multipliers, per-video breakdowns over a period — and bring new accounts under analysis. Use when the user says things like: \"how did my Reels perform this month\", \"which of my videos are outliers\", \"give me a breakdown of this account\", \"track this account\" или по-русски: «как зашли мои рилсы за месяц», «какие ролики выстрелили», «разбери этот аккаунт», «добавь аккаунт в отслеживание». Reach for this skill whenever the user's own Instagram / TikTok / YouTube numbers, post performance, engagement or growth comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
+description: "Read the performance of the Instagram / TikTok / YouTube accounts this workspace tracks — views, engagement, VM Score (0-100 virality), outlier multipliers, per-video breakdowns over a period — and bring new accounts under analysis. Use when the user says things like: \"how did my Reels perform this month\", \"which of my videos are outliers\", \"give me a breakdown of this account\", \"track this account\", \"connect my Instagram\" или по-русски: «как зашли мои рилсы за месяц», «какие ролики выстрелили», «разбери этот аккаунт», «добавь аккаунт в отслеживание», «подключи мой инстаграм». Reach for this skill whenever the user's own Instagram / TikTok / YouTube numbers, post performance, engagement or growth comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
 ---
 
 # Account analytics
@@ -13,8 +13,13 @@ Read the performance of the Instagram / TikTok / YouTube accounts this workspace
 - "which of my videos are outliers"
 - "give me a breakdown of this account"
 - "track this account"
+- "connect my Instagram"
 
-По-русски: «как зашли мои рилсы за месяц», «какие ролики выстрелили», «разбери этот аккаунт», «добавь аккаунт в отслеживание».
+По-русски: «как зашли мои рилсы за месяц», «какие ролики выстрелили», «разбери этот аккаунт», «добавь аккаунт в отслеживание», «подключи мой инстаграм».
+
+## Where to start
+
+**Connecting an account is the user's own step.** «Connect my Instagram» is not a tool call: only the user passes Instagram's consent screen, in the app under Analytics → Accounts. Call `list_my_accounts` first — if an own account is already there, say so; if not, give that path. `track_accounts` is a different thing, a paid import of a public profile by its address, so offer it only with its price. The free first breakdown the app gives a newcomer belongs to the app's onboarding: no tool here starts it.
 
 ## Connect the server first
 
@@ -38,8 +43,9 @@ POST https://api.viralmaxing.com/api/mcp
 - **API key** — send `X-API-Key: vmx_...`, created at https://viralmaxing.com/settings/api. The same key works
   for the REST API at `https://api.viralmaxing.com/api` (OpenAPI: https://docs.viralmaxing.com/openapi.yaml).
 
-Every tool is scoped to the authenticated user's workspace. There is no public data surface: if
-the workspace does not track an account, no tool here will return metrics for it.
+Every tool is scoped to the authenticated user's workspace. An account's own metrics come back
+only when the workspace tracks it. What reaches past the workspace is the keyword search over the
+whole video base and the niches — shared lists of authors with their followers and usual views.
 
 ## Tools
 
@@ -137,7 +143,7 @@ next page. A truncated table is never the whole answer — page before concludin
 
 ## When to reach for a different skill
 
-- **Competitor research** (`viralmaxing-research`) — Compare a creator against tracked competitors, discover new competitors in a niche, and find the formats already going viral by keyword, idea description or account.
+- **Competitor research** (`viralmaxing-research`) — Read the strong fresh videos already suggested to a workspace and the niches with their authors, compare a creator against tracked competitors, discover new competitors in a niche, and find the formats already going viral by keyword, idea description or account.
 - **Video intelligence** (`viralmaxing-video`) — Pull the transcript and metric detail of a specific short-form video, and export a set of videos as CSV.
 - **Content plan** (`viralmaxing-plan`) — Read and update the content plan: turn a researched video into a scenario, save an edited script, label a card with its narrative format or one of the user's own tags, move scenarios between statuses, and keep videos for later as ideas in Входящие.
 - **Instagram automation funnels** (`viralmaxing-automations`) — Build and change Instagram comment / Direct funnels — someone writes a code word under a reel and gets the material in Direct — and read the rules, their delivery stats and the leads they produced.

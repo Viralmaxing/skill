@@ -41,8 +41,9 @@ POST https://api.viralmaxing.com/api/mcp
 - **API key** — send `X-API-Key: vmx_...`, created at https://viralmaxing.com/settings/api. The same key works
   for the REST API at `https://api.viralmaxing.com/api` (OpenAPI: https://docs.viralmaxing.com/openapi.yaml).
 
-Every tool is scoped to the authenticated user's workspace. There is no public data surface: if
-the workspace does not track an account, no tool here will return metrics for it.
+Every tool is scoped to the authenticated user's workspace. An account's own metrics come back
+only when the workspace tracks it. What reaches past the workspace is the keyword search over the
+whole video base and the niches — shared lists of authors with their followers and usual views.
 
 ## Tools
 
@@ -112,7 +113,7 @@ next page. A truncated table is never the whole answer — page before concludin
 ## When to reach for a different skill
 
 - **Account analytics** (`viralmaxing-analytics`) — Read metrics for the accounts a workspace tracks: views, engagement, VM Score (0-100 virality), outlier multiplier and per-video breakdowns over a period.
-- **Competitor research** (`viralmaxing-research`) — Compare a creator against tracked competitors, discover new competitors in a niche, and find the formats already going viral by keyword, idea description or account.
+- **Competitor research** (`viralmaxing-research`) — Read the strong fresh videos already suggested to a workspace and the niches with their authors, compare a creator against tracked competitors, discover new competitors in a niche, and find the formats already going viral by keyword, idea description or account.
 - **Video intelligence** (`viralmaxing-video`) — Pull the transcript and metric detail of a specific short-form video, and export a set of videos as CSV.
 - **Content plan** (`viralmaxing-plan`) — Read and update the content plan: turn a researched video into a scenario, save an edited script, label a card with its narrative format or one of the user's own tags, move scenarios between statuses, and keep videos for later as ideas in Входящие.
 

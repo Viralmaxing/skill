@@ -23,8 +23,9 @@ environment.
   empty result means "not ready", and starting a second run charges a second time.
 - **Page.** Every list reports how many rows it showed out of how many exist, and the offset for
   the next page.
-- **Everything is workspace-scoped.** There is no public data surface; if the workspace does not
-  track an account, no call will return metrics for it.
+- **Everything is workspace-scoped.** An account's own metrics come back only when the workspace
+  tracks it. What reaches past the workspace is the keyword search over the whole video base and
+  the niches — shared lists of authors with their followers and usual views.
 
 ## Discovery documents
 
