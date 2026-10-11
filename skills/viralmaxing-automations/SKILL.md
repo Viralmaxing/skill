@@ -54,7 +54,7 @@ whole video base and the niches — shared lists of authors with their followers
 | `list_automation_leads` | Automation leads | read |
 | `get_automation_lead_thread` | Lead conversation | read |
 | `save_automation_lead` | Record a lead outcome | write |
-| `list_automation_reels` | Automation reels | read |
+| `list_automation_reels` | Automation publications | read |
 | `save_automation` | Create or change an automation | write |
 | `set_automation_enabled` | Switch an automation on or off | write |
 | `set_automation_archived` | Archive an automation | write |
