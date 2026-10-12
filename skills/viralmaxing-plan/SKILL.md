@@ -1,6 +1,6 @@
 ---
 name: viralmaxing-plan
-description: "Turn a researched video into a written script and move it through the plan — the step where research becomes something the user can film. Use when the user says things like: \"take this video into work\", \"write me a script from this\", \"what is in my content plan\", \"move that scenario to published\" или по-русски: «возьми это видео в работу», «напиши сценарий по этому ролику», «что у меня в плане», «переведи сценарий в опубликованные». Reach for this skill whenever writing a script, a content plan, or turning a reference video into something to film comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
+description: "Turn a researched video into a written script and move it through the plan — the step where research becomes something the user can film. Use when the user says things like: \"take this video into work\", \"write me a script from this\", \"what is in my content plan\", \"move that scenario to published\", \"split my plan by account\", \"link the video that came out\" или по-русски: «возьми это видео в работу», «напиши сценарий по этому ролику», «что у меня в плане», «переведи сценарий в опубликованные», «разложи карточки по аккаунтам», «привяжи вышедший ролик». Reach for this skill whenever writing a script, a content plan, or turning a reference video into something to film comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
 ---
 
 # Content plan
@@ -13,8 +13,16 @@ Turn a researched video into a written script and move it through the plan — t
 - "write me a script from this"
 - "what is in my content plan"
 - "move that scenario to published"
+- "split my plan by account"
+- "link the video that came out"
 
-По-русски: «возьми это видео в работу», «напиши сценарий по этому ролику», «что у меня в плане», «переведи сценарий в опубликованные».
+По-русски: «возьми это видео в работу», «напиши сценарий по этому ролику», «что у меня в плане», «переведи сценарий в опубликованные», «разложи карточки по аккаунтам», «привяжи вышедший ролик».
+
+## Where to start
+
+**Read how the board is laid out before placing or sorting cards.** `get_plan_board` shows the named stages (columns) and the swimlanes (rows). A user who runs several accounts or clients on one plan keeps them apart with swimlanes: a card goes on the swimlane of the account it is for — `swimlane_id` on `save_scenario`, `create_scenario` and `take_into_work`, and on `set_scenario_status` to lay many cards out in one call — and `list_scenarios` narrows to one. A card on no swimlane names none, which is not a board without swimlanes. Never propose tags for a split the board already has.
+
+When a card's video is out, link it with `save_scenario(published_post_id=…)`; `get_scenario` then shows what that video got, against the account's usual views once the account has enough videos to tell. Linking completes the card, so order a column first. `delete_scenarios` removes cards for good — get the user's yes first.
 
 ## Connect the server first
 
@@ -48,9 +56,14 @@ whole video base and the niches — shared lists of authors with their followers
 |---|---|---|
 | `list_scenarios` | Content plan | read |
 | `get_scenario` | Scenario detail | read |
+| `get_plan_board` | Plan board | read |
 | `create_scenario` | Add a scenario | write |
 | `save_scenario` | Edit a scenario | write |
 | `set_scenario_status` | Move scenarios | write |
+| `reorder_scenario` | Reorder a scenario | write |
+| `list_scenario_versions` | Scenario versions | read |
+| `copy_scenario` | Copy a scenario | write |
+| `delete_scenarios` | Delete scenarios | write |
 | `take_into_work` | Take a post into work | spend |
 | `list_scenario_tags` | Scenario tags | read |
 | `assign_scenario_tag` | Tag a scenario | write |
