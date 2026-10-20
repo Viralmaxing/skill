@@ -1,11 +1,11 @@
 ---
 name: viralmaxing-video
-description: "Understand one specific video: its full metrics, its caption, and what is actually said in it, via transcription. Use when the user says things like: \"transcribe this Reel\", \"what does this video say\", \"show me the numbers on this post\", \"why did this one work\" или по-русски: «расшифруй этот рилс», «о чём это видео», «покажи метрики этого поста», «почему этот ролик залетел». Reach for this skill whenever a specific Reel, TikTok or Short — its numbers, its hook, or what is said in it comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
+description: "Understand one specific video: its full metrics, its caption, what is actually said in it via transcription, and — for an own published Reel — a report read by the measured retention scale. Use when the user says things like: \"transcribe this Reel\", \"what does this video say\", \"show me the numbers on this post\", \"why did this one work\", \"report this video\" или по-русски: «расшифруй этот рилс», «о чём это видео», «покажи метрики этого поста», «почему этот ролик залетел», «разбери этот ролик». Reach for this skill whenever a specific Reel, TikTok or Short — its numbers, its hook, or what is said in it comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
 ---
 
 # Video intelligence
 
-Understand one specific video: its full metrics, its caption, and what is actually said in it, via transcription.
+Understand one specific video: its full metrics, its caption, what is actually said in it via transcription, and — for an own published Reel — a report read by the measured retention scale.
 
 ## When to use this skill
 
@@ -13,8 +13,9 @@ Understand one specific video: its full metrics, its caption, and what is actual
 - "what does this video say"
 - "show me the numbers on this post"
 - "why did this one work"
+- "report this video"
 
-По-русски: «расшифруй этот рилс», «о чём это видео», «покажи метрики этого поста», «почему этот ролик залетел».
+По-русски: «расшифруй этот рилс», «о чём это видео», «покажи метрики этого поста», «почему этот ролик залетел», «разбери этот ролик».
 
 ## Whole jobs
 
@@ -63,6 +64,7 @@ whole video base and the niches — shared lists of authors with their followers
 | `get_post_detail` | Post detail | read |
 | `get_transcript` | Read a transcript | read |
 | `transcribe_post` | Transcribe a video | spend |
+| `create_post_report` | Report a published video | spend |
 
 Available from every Viralmaxing skill: `get_energy_balance`, `get_operation`, `list_workspaces`, `switch_workspace`, `search`, `fetch`, `get_skill`.
 
@@ -84,6 +86,7 @@ attempted, rather than silently ignoring it. It usually means the account is tar
 ## Cost — the rule you must not break
 
 - `transcribe_post` — 10 energy
+- `create_post_report` — spends energy
 
 Every one of these **requires** a `confirm_cost` argument holding the exact price. The server
 refuses the call without it and states the real number; that refusal is not a retry signal.

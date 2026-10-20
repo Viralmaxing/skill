@@ -100,6 +100,7 @@ whole video base and the niches — shared lists of authors with their followers
 | `get_plan_board` | Plan board | read |
 | `create_scenario` | Add a scenario | write |
 | `save_scenario` | Edit a scenario | write |
+| `forecast_scenario_reach` | Forecast a script's reach | spend |
 | `set_scenario_status` | Move scenarios | write |
 | `reorder_scenario` | Reorder a scenario | write |
 | `list_scenario_versions` | Scenario versions | read |
@@ -133,6 +134,7 @@ attempted, rather than silently ignoring it. It usually means the account is tar
 
 ## Cost — the rule you must not break
 
+- `forecast_scenario_reach` — spends energy
 - `take_into_work` — a transcription, when the post it takes has no transcript yet
 - `save_ideas` — 1 energy per new video (×2 on Facebook); free for one already saved or on the plan
 
