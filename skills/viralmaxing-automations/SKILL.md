@@ -126,7 +126,7 @@ next page. A truncated table is never the whole answer — page before concludin
 
 ## When to reach for a different skill
 
-- **Account analytics** (`viralmaxing-analytics`) — Read metrics for the accounts a workspace tracks: views, engagement, VM Score (0-100 virality), outlier multiplier and per-video breakdowns over a period.
+- **Account analytics** (`viralmaxing-analytics`) — Read metrics for the accounts a workspace tracks: views, engagement, VM Score (0-100 virality), outlier multiplier and per-video breakdowns over a period, plus skips and completion of the user's own connected videos.
 - **Competitor research** (`viralmaxing-research`) — Read the strong fresh videos already suggested to a workspace and the niches with their authors, compare a creator against tracked competitors, discover new competitors in a niche, and find the formats already going viral by keyword, idea description or account.
 - **Video intelligence** (`viralmaxing-video`) — Pull the transcript and metric detail of a specific short-form video, and export a set of videos as CSV.
 - **Content plan** (`viralmaxing-plan`) — Read and update the content plan: turn a researched video into a scenario, save an edited script, label a card with its narrative format or one of the user's own tags, move scenarios between statuses and stages, place them on the board's swimlanes, link a card to the video it came out as, and keep videos for later as ideas in Входящие.

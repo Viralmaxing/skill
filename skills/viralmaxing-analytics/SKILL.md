@@ -1,11 +1,11 @@
 ---
 name: viralmaxing-analytics
-description: "Read the performance of the Instagram / TikTok / YouTube accounts this workspace tracks — views, engagement, VM Score (0-100 virality), outlier multipliers, per-video breakdowns over a period — and bring new accounts under analysis. Use when the user says things like: \"how did my Reels perform this month\", \"which of my videos are outliers\", \"give me a breakdown of this account\", \"track this account\", \"connect my Instagram\" или по-русски: «как зашли мои рилсы за месяц», «какие ролики выстрелили», «разбери этот аккаунт», «добавь аккаунт в отслеживание», «подключи мой инстаграм». Reach for this skill whenever the user's own Instagram / TikTok / YouTube numbers, post performance, engagement or growth comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
+description: "Read the performance of the Instagram / TikTok / YouTube accounts this workspace tracks — views, engagement, VM Score (0-100 virality), outlier multipliers, per-video breakdowns over a period, skips and completion of the user's own connected videos — and bring new accounts under analysis. Use when the user says things like: \"how did my Reels perform this month\", \"which of my videos are outliers\", \"give me a breakdown of this account\", \"track this account\", \"connect my Instagram\", \"how well do my reels hold attention\" или по-русски: «как зашли мои рилсы за месяц», «какие ролики выстрелили», «разбери этот аккаунт», «добавь аккаунт в отслеживание», «подключи мой инстаграм», «где мои рилсы пролистывают». Reach for this skill whenever the user's own Instagram / TikTok / YouTube numbers, post performance, engagement or growth comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
 ---
 
 # Account analytics
 
-Read the performance of the Instagram / TikTok / YouTube accounts this workspace tracks — views, engagement, VM Score (0-100 virality), outlier multipliers, per-video breakdowns over a period — and bring new accounts under analysis.
+Read the performance of the Instagram / TikTok / YouTube accounts this workspace tracks — views, engagement, VM Score (0-100 virality), outlier multipliers, per-video breakdowns over a period, skips and completion of the user's own connected videos — and bring new accounts under analysis.
 
 ## When to use this skill
 
@@ -14,8 +14,9 @@ Read the performance of the Instagram / TikTok / YouTube accounts this workspace
 - "give me a breakdown of this account"
 - "track this account"
 - "connect my Instagram"
+- "how well do my reels hold attention"
 
-По-русски: «как зашли мои рилсы за месяц», «какие ролики выстрелили», «разбери этот аккаунт», «добавь аккаунт в отслеживание», «подключи мой инстаграм».
+По-русски: «как зашли мои рилсы за месяц», «какие ролики выстрелили», «разбери этот аккаунт», «добавь аккаунт в отслеживание», «подключи мой инстаграм», «где мои рилсы пролистывают».
 
 ## Where to start
 
@@ -53,6 +54,7 @@ whole video base and the niches — shared lists of authors with their followers
 |---|---|---|
 | `list_my_accounts` | My accounts | read |
 | `get_account_overview` | Account overview | read |
+| `get_deep_analytics` | Deep analytics | read |
 | `list_posts` | Find posts | read |
 | `export_posts` | Export posts as CSV | read |
 | `create_account_report` | Analyze an account | spend |
