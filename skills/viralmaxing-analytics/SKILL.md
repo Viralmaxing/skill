@@ -149,7 +149,7 @@ next page. A truncated table is never the whole answer — page before concludin
 - **Competitor research** (`viralmaxing-research`) — Read the strong fresh videos already suggested to a workspace and the niches with their authors, compare a creator against tracked competitors, discover new competitors in a niche, and find the formats already going viral by keyword, idea description or account.
 - **Video intelligence** (`viralmaxing-video`) — Pull the transcript and metric detail of a specific short-form video, list the videos already analyzed, and export a set of videos as CSV.
 - **Content plan** (`viralmaxing-plan`) — Read and update the content plan: turn a researched video into a scenario, save an edited script, label a card with its narrative format or one of the user's own tags, move scenarios between statuses and stages, place them on the board's swimlanes, link a card to the video it came out as, and keep videos for later as ideas in Входящие.
-- **Instagram automation funnels** (`viralmaxing-automations`) — Build and change Instagram comment / Direct funnels — someone writes a code word under a reel and gets the material in Direct — and read the rules, their delivery stats and the leads they produced.
+- **Instagram automation funnels** (`viralmaxing-automations`) — Build and change Instagram comment / Direct funnels — someone writes a code word under a reel and gets the material in Direct (on a Facebook Page, in Messenger) — and read the rules, their delivery stats and the leads they produced.
 
 ## Not available here
 

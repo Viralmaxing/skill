@@ -1,6 +1,6 @@
 ---
 name: viralmaxing-automations
-description: "The Instagram comment / Direct funnels: build one on a code word, switch it on or off, and read which rules fire, how the deliveries convert and who the leads are. Use when the user says things like: \"set up a funnel on the code word GUIDE\", \"when someone comments GUIDE send them the link\", \"turn that funnel off\", \"how are my Instagram automations doing\", \"show me the leads from that funnel\", \"who is waiting for my reply in Direct\", \"which code word converts best\", \"what do people write that my funnel misses\", \"did that DM get delivered\" или по-русски: «сделай воронку на кодовое слово ГАЙД», «чтобы под роликом писали ГАЙД и им уходила ссылка», «выключи воронку», «как работают мои автоматизации в инстаграме», «покажи лиды из воронки», «кто ждёт ответа в директе», «какое кодовое слово лучше конвертит», «что пишут под роликами без ответа», «дошло ли сообщение». Reach for this skill whenever Instagram comment or Direct automations — building one on a code word, changing it, or reading what it brought in comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
+description: "The Instagram comment / Direct funnels: build one on a code word, switch it on or off, and read which rules fire, how the deliveries convert and who the leads are. Use when the user says things like: \"set up a funnel on the code word GUIDE\", \"when someone comments GUIDE send them the link\", \"turn that funnel off\", \"set up the same funnel on my Facebook Page\", \"how are my Instagram automations doing\", \"show me the leads from that funnel\", \"who is waiting for my reply in Direct\", \"which code word converts best\", \"what do people write that my funnel misses\", \"did that DM get delivered\" или по-русски: «сделай воронку на кодовое слово ГАЙД», «чтобы под роликом писали ГАЙД и им уходила ссылка», «выключи воронку», «сделай такую же воронку на странице Facebook», «как работают мои автоматизации в инстаграме», «покажи лиды из воронки», «кто ждёт ответа в директе», «какое кодовое слово лучше конвертит», «что пишут под роликами без ответа», «дошло ли сообщение». Reach for this skill whenever Instagram comment or Direct automations — building one on a code word, changing it, or reading what it brought in comes up, even if the user never says \"Viralmaxing\". Requires a Viralmaxing account and the Viralmaxing MCP server connected (https://api.viralmaxing.com/api/mcp) — without it none of these tools are callable."
 ---
 
 # Instagram automation funnels
@@ -12,6 +12,7 @@ The Instagram comment / Direct funnels: build one on a code word, switch it on o
 - "set up a funnel on the code word GUIDE"
 - "when someone comments GUIDE send them the link"
 - "turn that funnel off"
+- "set up the same funnel on my Facebook Page"
 - "how are my Instagram automations doing"
 - "show me the leads from that funnel"
 - "who is waiting for my reply in Direct"
@@ -19,7 +20,7 @@ The Instagram comment / Direct funnels: build one on a code word, switch it on o
 - "what do people write that my funnel misses"
 - "did that DM get delivered"
 
-По-русски: «сделай воронку на кодовое слово ГАЙД», «чтобы под роликом писали ГАЙД и им уходила ссылка», «выключи воронку», «как работают мои автоматизации в инстаграме», «покажи лиды из воронки», «кто ждёт ответа в директе», «какое кодовое слово лучше конвертит», «что пишут под роликами без ответа», «дошло ли сообщение».
+По-русски: «сделай воронку на кодовое слово ГАЙД», «чтобы под роликом писали ГАЙД и им уходила ссылка», «выключи воронку», «сделай такую же воронку на странице Facebook», «как работают мои автоматизации в инстаграме», «покажи лиды из воронки», «кто ждёт ответа в директе», «какое кодовое слово лучше конвертит», «что пишут под роликами без ответа», «дошло ли сообщение».
 
 ## Whole jobs
 
