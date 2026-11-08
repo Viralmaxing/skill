@@ -35,6 +35,8 @@ Someone writes a code word under a reel, and the product sends them the material
 3. The code word — from the script (`direct_word`) or from the person. It must not collide with another active funnel on the account.
 4. The messages: what the person said, or a draft — their offer and their own link (`get_brand`), never a link from someone else's caption.
 5. `save_automation` with the word, the reel and the messages. It is saved switched on unless told otherwise, so the person sees the whole funnel — every message, its buttons and where they lead, the replies under the reel — and says yes before it goes: in the app the call itself puts a confirmation card with all of it in front of them; elsewhere, show the whole draft and ask before saving. If the answer says it was kept off because template blanks are unfilled, say which ones to fill.
+6. By default the first message is short, with one button that moves on — a line or two about what the person gets, the material coming after the press; on a comments funnel it arrives as a private reply under the comment. The material as the first message is a fair choice too, when the person asks for it or the editor shows the opener's button losing those who do not follow.
+7. To change a funnel's chain, read it first (`list_automations` with its `automation_id`): `steps` replace the chain whole, so send every step that stays and mark the control step again (qualifies on that step) — a chain without it stops «Заявки» counting. The card shows how many steps there were and will be.
 
 ## Connect the server first
 
