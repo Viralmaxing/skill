@@ -101,23 +101,22 @@ attempted, rather than silently ignoring it. It usually means the account is tar
 
 ## Cost
 
-Nothing in this skill spends the user's energy. Call
-`get_energy_balance` if you need to report the balance.
+No tool in this skill has a price per call, and none counts down a balance.
 
-Free is not the same as harmless: `save_automation_lead`, `save_automation`, `set_automation_enabled`, `set_automation_archived`, `delete_automation` change the
-user's account rather than read it, and they take effect immediately. Nothing prices them, so no
-price gate makes you stop and ask — you are the pause. Call them because the user asked for that
-change, never to find out what happens.
+No price is not the same as harmless: `save_automation_lead`, `save_automation`, `set_automation_enabled`, `set_automation_archived`, `delete_automation` change the
+user's account rather than read it, and they take effect immediately. No confirmation step makes you
+stop and ask — you are the pause. Call them because the user asked for that change, never to find
+out what happens.
 
 ## When a call comes back with an error
 
 Errors arrive as tool content marked `isError`, not as protocol failures, and they are two
 different things wearing the same shape:
 
-- **A refusal** — the server worked and is telling you the call was wrong. A price you did not
-  confirm, a value outside an argument's vocabulary, an id you have not fetched yet, a workspace
-  that does not exist, an empty balance. Every one of these names what *would* have worked, right
-  there in the message.
+- **A refusal** — the server worked and is telling you the call was wrong. A plan the account
+  does not have, a limit reached, a value outside an argument's vocabulary, an id you have not
+  fetched yet, a workspace that does not exist. Every one of these names what *would* have worked,
+  right there in the message.
 - **A failure** — something below the server broke. The message describes a fault, not a fix.
 
 The distinction decides your next move. **A refusal is never a retry**: sending the same call

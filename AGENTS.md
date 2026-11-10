@@ -17,10 +17,11 @@ environment.
 
 ## Rules that will save you a support ticket
 
-- **Confirm costs.** Paid tools reject a call without an exact `confirm_cost`. That refusal names
-  the price. Do not retry with a guess — surface the number to the human first.
+- **Mind the plan's limits.** No tool has a price per call and `confirm_cost` is not needed. A
+  call past the plan's accounts, team or Instagram limit is refused with the limit — surface it to
+  the human; do not retry, and do not import accounts the human has not named.
 - **Poll, do not re-run.** Imports, transcriptions, searches and discovery are asynchronous. An
-  empty result means "not ready", and starting a second run charges a second time.
+  empty result means "not ready", and starting a second run does the same work twice.
 - **Page.** Every list reports how many rows it showed out of how many exist, and the offset for
   the next page.
 - **Everything is workspace-scoped.** An account's own metrics come back only when the workspace

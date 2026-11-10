@@ -32,18 +32,19 @@ Keys are created at https://viralmaxing.com/settings/api. A Viralmaxing account 
 | `mcp.json` | MCP server declaration for plugin hosts |
 | `AGENTS.md` | Notes for AI coding agents working against this API |
 
-## A note on cost
+## A note on the plan
 
-37 of the 68 tools are free reads. The
-9 that produce something new spend the account's energy, and every one
-of them requires a `confirm_cost` argument holding the exact price — the server refuses the call
-otherwise and states the real number. Tell the person the price and get their agreement before
-confirming; that handshake is the point, not an obstacle.
+37 of the 68 tools are reads. The
+9 that produce something new need a paid plan and nothing else: no tool
+has a price per call, and `confirm_cost` is not needed. What a plan limits is the accounts in
+analytics across all of the owner's workspaces, the people on the team and the Instagram accounts
+connected by login; an import takes a place in that limit, so name the accounts to the person
+before calling.
 
 ## Generated, not hand-written
 
-`SKILL.md` is generated from the connector's own tool catalog, so the tool list and the prices in
-it cannot drift from the server that enforces them. File issues about the skill's *content*
+`SKILL.md` is generated from the connector's own tool catalog, so the tool list in it cannot
+drift from the server that serves it. File issues about the skill's *content*
 against the product; edits here would be overwritten on the next publish.
 
 Docs: https://viralmaxing.com/developers · Product: https://viralmaxing.com
