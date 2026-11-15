@@ -34,7 +34,7 @@ Keys are created at https://viralmaxing.com/settings/api. A Viralmaxing account 
 
 ## A note on the plan
 
-37 of the 68 tools are reads. The
+38 of the 71 tools are reads. The
 9 that produce something new need a paid plan and nothing else: no tool
 has a price per call, and `confirm_cost` is not needed. What a plan limits is the accounts in
 analytics across all of the owner's workspaces, the people on the team and the Instagram accounts
